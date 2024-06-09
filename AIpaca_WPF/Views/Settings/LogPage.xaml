@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIpaca_App.Views.LogPage"
+             xmlns:resources="clr-namespace:AIpaca_App.Resources.Localization"
+             xmlns:vm="clr-namespace:AIpaca_App.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:converters="clr-namespace:AIpaca_App.Converters"
+             BackgroundColor="{DynamicResource DefaultPageBackgroundColor}"
+             Title="Log" >
+
+    <ContentPage.BindingContext>
+        <vm:LogViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView Scrolled="ScrollView_Scrolled">
+        <VerticalStackLayout>
+            <CollectionView ItemsSource="{Binding Logs}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="10" Padding="0" CornerRadius="10" BorderColor="Gray" BackgroundColor="{Binding Success, Converter={StaticResource SuccessToColorConverter}}">
+                            <StackLayout Orientation="Vertical" Spacing="10" Padding="10">
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnCopyButtonClicked" />
+                                </StackLayout.Behaviors>
+                                <Label Text="{Binding Timestamp, StringFormat='Timestamp: {0:yyyy-MM-dd HH:mm:ss}'}"/>
+                                <Label Text="{Binding Message}"/>
+                                <Label Text="{Binding Success}"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

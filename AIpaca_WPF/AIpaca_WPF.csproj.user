@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Account\LoginPagePopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Account\SignupPagePopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AlertPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChallengePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RecordPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RobotPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RobotPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\ApiCreatePopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\ApiSettingPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\LanguageSelectionPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\LogPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

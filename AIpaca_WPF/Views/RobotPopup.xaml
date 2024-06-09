@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:resources="clr-namespace:AIpaca_App.Resources.Localization"
+             x:Class="AIpaca_App.Views.RobotPopup" 
+             Color= "{x:Static Colors.Transparent}">
+
+    <Border Padding="5" BackgroundColor="{AppThemeBinding Dark=#1c1c1c, Light=#ffffff}">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="2" />
+        </Border.StrokeShape>
+        
+        <VerticalStackLayout Spacing="5">
+            <Frame CornerRadius="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Transparent}" HasShadow="True" Padding="2" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <StackLayout Orientation="Horizontal" Spacing="15" Padding="10">
+                    <StackLayout.Behaviors>
+                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnEvaluateButtonClicked" />
+                    </StackLayout.Behaviors>
+                    <Image Source="robotpopup_evaluation.png" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="평가받기" FontSize="Subtitle" VerticalOptions="Center" FontAttributes="Bold"/> 
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Transparent}" HasShadow="True" Padding="2" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <StackLayout Orientation="Horizontal" Spacing="15" Padding="10">
+                    <StackLayout.Behaviors>
+                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                               PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnCopyButtonClicked" />
+                    </StackLayout.Behaviors>
+                    <Image Source="robotpopup_copy.png" VerticalOptions="FillAndExpand" WidthRequest="30" HeightRequest="30" />
+                    <Label Text="복사하기" FontSize="Subtitle" VerticalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </Border>
+</toolkit:Popup>

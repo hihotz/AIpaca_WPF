@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:resources="clr-namespace:AIpaca_App.Resources.Localization"
+               x:Class="AIpaca_App.Views.Account.LoginPagePopup"
+               Color= "{x:Static Colors.Transparent}">
+
+    <!-- Border를 사용하여 모서리를 둥글게 설정 -->
+    <Border Padding="20" BackgroundColor="{AppThemeBinding Dark=#1c1c1c, Light=#ffffff}" WidthRequest="300">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20" />
+        </Border.StrokeShape>
+        <VerticalStackLayout Spacing="15">
+            <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                <Entry x:Name="UsernameEntry" Placeholder="{x:Static resources:AppResources.username}"/>
+            </Frame>
+            <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" IsPassword="True"/>
+            </Frame>
+            <Button Text="{x:Static resources:AppResources.login}" Clicked="OnLoginClicked"/>
+        </VerticalStackLayout>
+    </Border>
+</toolkit:Popup>
+    
+    
